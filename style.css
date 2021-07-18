@@ -1,0 +1,35 @@
+.container {
+  max-width: 400px;
+}
+
+input[type=text],
+input[type=text]:focus {
+  color: #fff;
+  border: none;
+  background: rgba(249, 250, 249, 0.2);
+  max-width: 400px;
+}
+
+.todos-container li {
+  background: #0699af;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.add {
+  cursor: pointer;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
