@@ -25,7 +25,7 @@ const deleteToDo = clickedElement => {
     }
 }
 
-const checkedToDo = clickedElement => {
+const checkTodo = clickedElement => {
     if(Array.from(clickedElement.classList).includes('checkbox-selected')){
         Array.from(clickedElement.parentNode.children)
             .filter(todo => todo.textContent)
@@ -35,17 +35,15 @@ const checkedToDo = clickedElement => {
    }
 }
 
-const showSearchResults = (inputValue, class1, class2, match) => {
+const showSearchResults = (inputValue, classToAdd, classToRemove, match) => {
     Array.from(todosContainer.children)
-        .filter(todo => {
-            if(!match){
-                return todo => !todo.textContent.toLowerCase().includes(inputValue)
-            }
-            return todo.textContent.toLowerCase().includes(inputValue)                
-        })
+        .filter(todo => !match 
+            ? !todo.textContent.toLowerCase().includes(inputValue) 
+            : todo.textContent.toLowerCase().includes(inputValue)
+        )
         .forEach(todo => {
-            todo.classList.remove(class1)
-            todo.classList.add(class2)
+            todo.classList.remove(classToAdd)
+            todo.classList.add(classToRemove)
         })
 }
 
@@ -60,7 +58,7 @@ todosContainer.addEventListener('click', event => {
    const clickedElement = event.target
    
    deleteToDo(clickedElement)
-   checkedToDo(clickedElement)
+   checkTodo(clickedElement)
 })
 
 inputSearchTodo.addEventListener('input', event => {
