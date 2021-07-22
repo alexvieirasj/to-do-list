@@ -1,2 +1,2 @@
 # to-do-list
-Aplicação To do List em js e Html
+Aplicação To do List do curso de js
