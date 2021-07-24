@@ -1,2 +1,2 @@
 # to-do-list
-Aplicação To do List do curso de js
+Aplicação To do List do curso de Javascript
