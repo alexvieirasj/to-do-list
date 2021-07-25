@@ -1,2 +1,2 @@
 # to-do-list
-Aplicação To do List do curso de Javascript
+Aplicação To do List do curso de Javascript do curso CJRM
